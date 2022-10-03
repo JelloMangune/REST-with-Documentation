@@ -30,7 +30,7 @@ class ProductsController extends Controller
     }
 
     public function allCategories(){
-        $retrieved_category = Products::select('category')->get();
+        $retrieved_category = Products::select('category')->distinct()->get();
         $categories = array();
         foreach($retrieved_category as $category){
             array_push($categories, $category['category']);
