@@ -1,0 +1,489 @@
+name: Endpoints
+description: ''
+endpoints:
+  -
+    httpMethods:
+      - GET
+    uri: api/user
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/products/categories
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"categories":["book","toy","accessory","costume","Soap","Updated category"]}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '59'
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/products
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"products":[{"id":2,"title":"One Piece Manga","description":"One Piece, Vol. 99 (Paperback)","currency":"PHP","price":"549.00","brand":"Fully Booked","category":"book","image":"https:\/\/kbimages1-a.akamaihd.net\/1d978cea-9b4e-4aba-aca5-f091c48b8915\/1200\/1200\/False\/one-piece-vol-99.jpg","created_at":null,"updated_at":null},{"id":3,"title":"Luffy Figurine","description":"One Piece Action Figure Luffy Model: 16-33cm Anime Action Figures","currency":"PHP","price":"1299.99","brand":"Banpresto","category":"toy","image":"https:\/\/lzd-img-global.slatic.net\/g\/p\/9cbf7539cdc75a4a71f1de1dff1b1f01.jpg_2200x2200q80.jpg_.webp","created_at":null,"updated_at":null},{"id":4,"title":"Zoro Sword","description":"Roronoa Zoro Wooden Sword Samurai (140cm)","currency":"PHP","price":"579.00","brand":"Hickory","category":"accessory","image":"https:\/\/lzd-img-global.slatic.net\/g\/p\/dad7315bb26c997743af65649b09deab.jpg_2200x2200q80.jpg_.webp","created_at":null,"updated_at":null},{"id":5,"title":"Luffy Straw Hat","description":"Luffy Straw Hat Multifunctional Anime Cartoon Character Cosplay Sun Hat for Adults","currency":"PHP","price":"304.00","brand":"OEM","category":"costume","image":"https:\/\/lzd-img-global.slatic.net\/g\/p\/fe538a1ccc68fdad1fe4790a7a38de09.jpg_2200x2200q80.jpg_.webp","created_at":null,"updated_at":null},{"id":6,"title":"Added Product","description":"Added Product Description","currency":"PHP","price":"1000.00","brand":"Brand X","category":"Soap","image":"sampleimage.com","created_at":"2022-10-02T19:28:13.000000Z","updated_at":"2022-10-02T19:28:13.000000Z"},{"id":7,"title":"Updated Product","description":"Changed description","currency":"USD","price":"2000.00","brand":"Updated brand","category":"Updated category","image":"Updated image","created_at":"2022-10-03T04:59:05.000000Z","updated_at":"2022-10-03T04:59:05.000000Z"},{"id":8,"title":"Updated Product","description":"Changed description","currency":"USD","price":"2000.00","brand":"Updated brand","category":"Updated category","image":"Updated image","created_at":"2022-10-03T04:59:49.000000Z","updated_at":"2022-10-03T04:59:49.000000Z"}]}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '58'
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/products/{product_id}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      product_id:
+        name: product_id
+        description: 'The ID of the product.'
+        required: true
+        example: autem
+        type: string
+        custom: []
+    cleanUrlParameters:
+      product_id: autem
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"products":null}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '57'
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/products/search/{title}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      title:
+        name: title
+        description: ''
+        required: true
+        example: quo
+        type: string
+        custom: []
+    cleanUrlParameters:
+      title: quo
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"products":[]}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '56'
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/products/category/{category_name}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      category_name:
+        name: category_name
+        description: ''
+        required: true
+        example: ducimus
+        type: string
+        custom: []
+    cleanUrlParameters:
+      category_name: ducimus
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"products":[]}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '55'
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/products/add
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      title:
+        name: title
+        description: ''
+        required: true
+        example: et
+        type: string
+        custom: []
+      description:
+        name: description
+        description: ''
+        required: true
+        example: maxime
+        type: string
+        custom: []
+      currency:
+        name: currency
+        description: ''
+        required: true
+        example: sit
+        type: string
+        custom: []
+      price:
+        name: price
+        description: ''
+        required: true
+        example: itaque
+        type: string
+        custom: []
+      brand:
+        name: brand
+        description: ''
+        required: true
+        example: voluptatum
+        type: string
+        custom: []
+      category:
+        name: category
+        description: ''
+        required: true
+        example: inventore
+        type: string
+        custom: []
+      image:
+        name: image
+        description: ''
+        required: true
+        example: id
+        type: string
+        custom: []
+    cleanBodyParameters:
+      title: et
+      description: maxime
+      currency: sit
+      price: itaque
+      brand: voluptatum
+      category: inventore
+      image: id
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - PUT
+    uri: 'api/products/{product_id}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      product_id:
+        name: product_id
+        description: 'The ID of the product.'
+        required: true
+        example: culpa
+        type: string
+        custom: []
+    cleanUrlParameters:
+      product_id: culpa
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      title:
+        name: title
+        description: ''
+        required: true
+        example: ut
+        type: string
+        custom: []
+      description:
+        name: description
+        description: ''
+        required: true
+        example: est
+        type: string
+        custom: []
+      currency:
+        name: currency
+        description: ''
+        required: true
+        example: architecto
+        type: string
+        custom: []
+      price:
+        name: price
+        description: ''
+        required: true
+        example: velit
+        type: string
+        custom: []
+      brand:
+        name: brand
+        description: ''
+        required: true
+        example: optio
+        type: string
+        custom: []
+      category:
+        name: category
+        description: ''
+        required: true
+        example: hic
+        type: string
+        custom: []
+      image:
+        name: image
+        description: ''
+        required: true
+        example: nemo
+        type: string
+        custom: []
+    cleanBodyParameters:
+      title: ut
+      description: est
+      currency: architecto
+      price: velit
+      brand: optio
+      category: hic
+      image: nemo
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/products/{id}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the product.'
+        required: true
+        example: est
+        type: string
+        custom: []
+    cleanUrlParameters:
+      id: est
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
